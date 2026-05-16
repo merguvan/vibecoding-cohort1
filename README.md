@@ -24,6 +24,10 @@ Proje, arka planda `app.py`, `agent.py`, `asistan.py` ve `llm.py` Python dosyala
 
 Katkıda bulunmak isteyenler standart bir pull request süreci üzerinden projeye katkıda bulunabilirler.
 
+## Eklenen Agent Araci
+
+Bu fork'ta `text_insights` adinda yeni bir agent araci eklendi. Agent bu araci kullanarak verilen metindeki kelime sayisini, karakter sayisini, cumle sayisini ve tahmini okuma suresini hesaplayabilir. Arac `backend/tools/` altinda tanimlandi ve `agent.py` icindeki tool-calling dongusune kaydedildi.
+
 ## Lisans
 
 Bu projeye ait lisans bilgileri burada yer alacaktır.

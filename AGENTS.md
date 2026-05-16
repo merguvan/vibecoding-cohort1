@@ -25,6 +25,11 @@ app.py                  # Flask uygulaması; routing, doğrulama, oturum yöneti
 llm.py                  # OpenAI istemcisi; hafızasız stream_llm() fonksiyonu
 asistan.py              # Asistan sınıfı; conversation history + stream_sohbet()
 agent.py                # Agent sınıfı; tool-calling agentic loop + calistir() generator
+backend/
+  __init__.py           # Backend paket tanımı
+  tools/
+    __init__.py         # Ek agent tool tanımları ve fonksiyon kayıtları
+    text_insights.py    # Metin istatistikleri üreten agent tool'u
 frontend/
   index.html            # LLM arayüzü: tek seferlik prompt/yanıt sayfası
   asistan.html          # Asistan arayüzü: çok turlu, baloncuklu sohbet sayfası

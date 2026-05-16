@@ -3,6 +3,7 @@ import os
 import subprocess
 from typing import Iterator
 
+from backend.tools import TOOL_DEFINITIONS, TOOL_FUNCTIONS
 from llm import client
 
 AGENT_WORKSPACE = "/tmp/agent_workspace"
@@ -56,6 +57,8 @@ TOOLS = [
     },
 ]
 
+TOOLS.extend(TOOL_DEFINITIONS)
+
 
 def _terminal(command: str) -> str:
     os.makedirs(AGENT_WORKSPACE, exist_ok=True)
@@ -101,6 +104,7 @@ _TOOL_MAP = {
     "dosya_oku": lambda a: _dosya_oku(a["yol"]),
     "dosya_yaz": lambda a: _dosya_yaz(a["yol"], a["icerik"]),
 }
+_TOOL_MAP.update(TOOL_FUNCTIONS)
 
 
 class Agent:
